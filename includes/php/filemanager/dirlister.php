@@ -35,7 +35,7 @@ class dirLister{
      * @return void
      */
     function enterDir($setdossier=null){
-        $this->dossier=$dossier.$setdossier;
+        $this->dossier.=$setdossier;
     }
 
     /**
@@ -111,10 +111,10 @@ class dirLister{
     }
     /**
      * @param $ext
-     * @param $Fichier
+     * @param null $Fichier
      * @return string
      */
-    function getFileType($ext,$Fichier){
+    function getFileType($ext,$Fichier=null){
         $FileExt=substr($ext,1,strlen($ext));
         if (is_file('filestypes/'.$FileExt.'.png')){
             return 'filestypes/'.$FileExt.'.png';
