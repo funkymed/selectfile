@@ -1,3 +1,3 @@
 <?php
-	mkdir($_POST['_currentdir'].$_POST['newdir'],0777);
+    mkdir($_POST['_currentdir'].$_POST['newdir'],0777);
 ?>
