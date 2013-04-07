@@ -77,7 +77,7 @@ class dirLister{
                         $this->all_file["OCTSIZE"][]=$fileSize;
                         $this->all_file["DATE"][]=date ("d/m/Y H:i:s", filemtime($this->dossier.$Fichier));
                         $this->all_file["PATH"][]=$this->dossier.$Fichier;
-                        $this->all_file["ICON"][]=$this->getFileType(strtolower(strrchr($Fichier, '.')),$Fichier);
+                        $this->all_file["ICON"][]=$this->getFileType(strtolower(strrchr($Fichier, '.')));
                         $this->directory_file_size+=$fileSize;
                     }
                 }
@@ -111,10 +111,9 @@ class dirLister{
     }
     /**
      * @param $ext
-     * @param null $Fichier
      * @return string
      */
-    function getFileType($ext,$Fichier=null){
+    function getFileType($ext){
         $FileExt=substr($ext,1,strlen($ext));
         if (is_file('filestypes/'.$FileExt.'.png')){
             return 'filestypes/'.$FileExt.'.png';
