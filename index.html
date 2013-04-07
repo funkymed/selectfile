@@ -1,0 +1,124 @@
+<html>
+<head>
+    <title>SelectFile</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="//twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        body{
+            background: #efefef;
+        }
+        .box{
+            border: 4px white solid;
+            padding:15px;
+        }
+        .box strong{
+            min-width: 150px;
+        }
+    </style>
+</head>
+<body onload="prettyPrint();">
+
+<div class="row-fluid">
+    <div class="container">
+        <div class="span8">
+            <div class="intro">
+                <h1>SelectFile</h1>
+                <p>
+                    A select field to select a server file<br />
+                    <span class="label label-info">&nbsp;&gt; PrototypeJS = SelectFile</span>
+                </p>
+                Project on GitHub : <a href="https://github.com/funkymed/selectfile">https://github.com/funkymed/selectfile</a>
+            </div>
+            <div >
+                <div >
+                    <ul>
+                        <li><a href="#author">Author</a></li>
+                        <li><a href="#doc">Documentation</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <a name="author"></a>
+                <h4>Author</h4>
+                <div>
+                    <p>
+                        Cyril Pereira<br />
+                        <a target="_blank" href="http://www.cyrilpereira.com">http://www.cyrilpereira.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <a name="doc"></a><h4>Documentation</h4>
+                <div>
+                    <p>Add the select in your form</p>
+
+<pre class="prettyprint linenums">&lt;form&gt;
+    &lt;input type="hidden" id="file" name="file" readonly="readonly" /&gt;
+    &lt;div id="filemanager"&gt;&lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+                    <p>End then initialize the code</p>
+
+<pre class="prettyprint linenums">&lt;script type="text/javascript"&gt;
+    var _SelectFile=new SelectFile(
+    {
+        SourceObjName:'_SelectFile',
+        DivId:'filemanager',
+        InputId:'file',
+        ValidExtension:'.swf,.jpg',
+        SourceDir:'directory/'
+    });
+&lt;/script&gt;
+</pre>
+                </div>
+            </div>
+        </div>
+        <div class="span4">
+            <h4>Demo</h4>
+            <div id="content">
+                <input type="hidden" id="file" name="file" readonly="readonly" />
+                <div id="filemanager"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="includes/js/protoculous-packer.js"></script>
+<script type="text/javascript" src="includes/js/selectfile.js"></script>
+<script type="text/javascript">
+    var _SelectFile=new SelectFile(
+    {
+        SourceObjName:'_SelectFile',
+        DivId:'filemanager',
+        InputId:'file',
+        ValidExtension:'.swf,.jpg,.html',
+        SourceDir:'directory/'
+    });
+</script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-944839-15']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+</html>
