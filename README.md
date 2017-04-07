@@ -8,11 +8,11 @@ GitHub : https://github.com/funkymed/selectfile
 
 ##Demo
 
-http://www.cyrilpereira.com/selectfile/
+http://med.planet-d.net/demo/web/selectfile
 
 ##Author
 
-Cyril Pereira http://www.cyrilpereira.com
+Cyril Pereira <cyril.pereira@gmail.com>
 
 ##Documentation
 
